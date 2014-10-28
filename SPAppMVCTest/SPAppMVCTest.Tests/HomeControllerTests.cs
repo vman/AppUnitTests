@@ -45,7 +45,7 @@ namespace SPAppMVCTest.Tests
             request.Setup(r => r.Form).Returns(formData);
             
             var qs = new NameValueCollection();
-            qs.Add("SPHostUrl", "https://candc365.sharepoint.com/sites/dev");
+            qs.Add("SPHostUrl", "https://vrdman.sharepoint.com/sites/dev");
             qs.Add("SPLanguage", "en-US");
             qs.Add("SPClientTag", "0");
             qs.Add("SPProductNumber", "16.0.3403.1216");
