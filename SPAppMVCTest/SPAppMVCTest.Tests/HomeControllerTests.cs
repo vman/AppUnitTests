@@ -23,8 +23,9 @@ namespace SPAppMVCTest.Tests
         string remoteSiteUrl = "https://localhost:44303/";
         string hostWebUrl = "https://vrdman.sharepoint.com/sites/dev";
 
-        string contextToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MDcwZjY4NC1iZjZiLTQ2N2UtYTg0My1iZjVjMmU0YTNhNTgvbG9jYWxob3N0OjQ0MzAzQDI3MTA0MTMwLTgxY2QtNGFlYy1hOGM5LTNiYjYzZTBiYzk1NyIsImlzcyI6IjAwMDAwMDAxLTAwMDAtMDAwMC1jMDAwLTAwMDAwMDAwMDAwMEAyNzEwNDEzMC04MWNkLTRhZWMtYThjOS0zYmI2M2UwYmM5NTciLCJuYmYiOjE0MTQ1MjM1ODIsImV4cCI6MTQxNDU2Njc4MiwiYXBwY3R4c2VuZGVyIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwQDI3MTA0MTMwLTgxY2QtNGFlYy1hOGM5LTNiYjYzZTBiYzk1NyIsImFwcGN0eCI6IntcIkNhY2hlS2V5XCI6XCJ2cDlibThBR2Y1KzB3V3JsU3FkaWY5c0RGYzV3ZHV4ODZpN3B0L0VUdlR3PVwiLFwiU2VjdXJpdHlUb2tlblNlcnZpY2VVcmlcIjpcImh0dHBzOi8vYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldC90b2tlbnMvT0F1dGgvMlwifSIsInJlZnJlc2h0b2tlbiI6IklBQUFBS3lHYzdnWE1oUV80cDhmd0FFd0xBbENmQ2g0OTNKSUktQjNTYXdhcVNsaW11UWx6SEgxSWdMT3l3VVpSZV8xRzhzVGNPZEk2S2o3M3J2YmhqVi1zNmpVUDBkV0tYZ1kwQ2pDQ0RveVRfNGlYcXI0V3NTSkFuQVlqWGRLekExd0Z2dmx2MU0yUU5hMFZZSmxxbGJJaTg4bmxVeEJycjN3aEpsaXRhRm9zaHF5VmQ5T2lNVDBxeDdZakRuTDg2Q3g2NlRYY0JTalB0SnNJbVNyWVNSQTJraGNpUXhrV1VyVW1qNHp3Y05waFlMODJDOWNNdmVqTEtwUmFTMFI4YmNZdDV1amVfQ2ZyaGFyVmdJb2xPb3dTRXZJeWtoVHJ2Z0RkNlNIMVZwazJDU2ZfdFVOc09PMUxRRjB4LXpDZm44MVN3IiwiaXNicm93c2VyaG9zdGVkYXBwIjoidHJ1ZSJ9.nbWAtuf7e8-5CWTwWpsxWu7aGxbhXCBEH-il0rfb0xI";
-        
+        string contextToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0Mzc5ZTM1MC01NTQ2LTRhNWMtYjVhYy1iNDcyZjM5ZWE3MzYvbG9jYWxob3N0OjQ0MzAzQDI3MTA0MTMwLTgxY2QtNGFlYy1hOGM5LTNiYjYzZTBiYzk1NyIsImlzcyI6IjAwMDAwMDAxLTAwMDAtMDAwMC1jMDAwLTAwMDAwMDAwMDAwMEAyNzEwNDEzMC04MWNkLTRhZWMtYThjOS0zYmI2M2UwYmM5NTciLCJuYmYiOjE0MTQ3NjQ2MjIsImV4cCI6MTQxNDgwNzgyMiwiYXBwY3R4c2VuZGVyIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwQDI3MTA0MTMwLTgxY2QtNGFlYy1hOGM5LTNiYjYzZTBiYzk1NyIsImFwcGN0eCI6IntcIkNhY2hlS2V5XCI6XCJhNWZhTVJnMGZKRTQzS2hRZ0JHZktmRkpDQTM5RmVlczU3b0l2U3pLZGF3PVwiLFwiU2VjdXJpdHlUb2tlblNlcnZpY2VVcmlcIjpcImh0dHBzOi8vYWNjb3VudHMuYWNjZXNzY29udHJvbC53aW5kb3dzLm5ldC90b2tlbnMvT0F1dGgvMlwifSIsInJlZnJlc2h0b2tlbiI6IklBQUFBT1N0cFlHUEVvZlF6V0N0c3RSSHJxQzBOWVNmU2RtMUZTYTZpdVZMdzFjd01oaUlJV256WHFkSzBXQUxEZUhVTGtoQW1pTFlKRkxFNVVUdlhhUHFVVG5MVHZpekVyRVpBMlJUNWxHWDhQSkhQODlzN0JxOGVGbHVZbmg4d0ZKZ3J1Rnl3QW12am8yaERWS21QQ3Z0cU14WWdEcGIxYnVMWU5MSmpoWWRDdUxpck83cU5kdl95aS1RUENmcm9yVjhULVNvODNyb25LM0xvXzhlMnc0cC1kQUd0MVNCemlrZGhSV253a2JhSjlHTVNSLUxQRkdYLXZxRC1Sd0Njdmd3ZGZKRGN3YlA3bDZyQnlEWFk1TmRTc3o4YmtZNHNia2V4QTgwU09OT2dPY2o0WTRyNFJyZEEwTHhHa09mRWYzcmllU1UxMzE3eVpSSmtzQmVrSmVPdkdVIiwiaXNicm93c2VyaG9zdGVkYXBwIjoidHJ1ZSJ9.vUGwFeabL0kx9D9-kZW-7PGASdcwjd6NBQI00IOLUnY";
+
+
         [TestInitialize]
         public void SetUp()
         {
@@ -97,6 +98,19 @@ namespace SPAppMVCTest.Tests
             Assert.AreEqual("Vardhaman Deshpande", result);
         }
 
-        
+        [TestMethod]
+        public void GetAppOnlyCurrentUserTitle()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+            controller.ControllerContext = new ControllerContext(context.Object, new RouteData(), controller);
+
+            // Act
+            string result = controller.GetAppOnlyCurrentUserTitle();
+
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.AreEqual("SharePoint App", result);
+        }
     }
 }
